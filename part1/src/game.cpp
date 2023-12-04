@@ -351,7 +351,7 @@ void Game::Render()
         }
 
         // render the text in the top bar for the lives remaining and the score
-        TextLives->RenderText("" + ss.str(), 600.0f, 5.0f, 1.0f, glm::vec3(142 / 255.0f, 142 / 255.0f, 142 / 255.0f));
+        TextLives->RenderText("" + ss.str(), 750.0f, 5.0f, 1.0f, glm::vec3(142 / 255.0f, 142 / 255.0f, 142 / 255.0f));
         TextLives->RenderText("" + scorestring, 200.0f, 5.0f, 1.0f, glm::vec3(142 / 255.0f, 142 / 255.0f, 142 / 255.0f));
     }
 
