@@ -14,6 +14,7 @@
   * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch however!
   * I used Joey DeVries' Breakout tutorial from learnopengl.com: https://learnopengl.com/In-Practice/2D-Game/Breakout 
   Of course, I also added many personal touches, which are explained in my video. 
+  * Additionally, I used some SDL2 code from the starter code from various homeworks from this course.
   * (Optional) What was the most interesting part of the Final Assignment? How could the instructor improve the final project?
   The most interesting part of the Final Assignment was getting to choose my own topic for it. As I noted in my video, I'm a huge retro video game fan, so getting to make Breakout for my final project while using what I have learned in the course (and a little beyond the course content) was fun, despite the number of head-scratching bugs I dealt with. There is nothing I would do to improve the final project.
 
