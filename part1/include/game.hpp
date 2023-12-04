@@ -12,6 +12,7 @@
 #include <glad/glad.h>
 
 #include "game_level.hpp"
+#include "ball_object.hpp"
 
 // Represents the current state of the game
 enum GameState
@@ -65,6 +66,13 @@ public:
     void DoCollisions();
     void ResetLevel();
     void ResetPlayer();
+
+private:
+    // check if a box and a ball have collided
+    void CheckBallBrickCollision(BallObject *Ball, GameObject &box);
+
+    // check if a player and a ball have collided
+    void CheckBallPlayerCollision(BallObject *Ball, GameObject *Player);
 };
 
 #endif

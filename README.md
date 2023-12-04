@@ -8,7 +8,7 @@
 * Name
   * Team member 1: Justin Diament
 * How many hours did it take you to complete this final project? 
-  * It took me around 16 hours to complete this project
+  * It took me around 18 hours to complete this project
 * Did you collaborate or share ideas with any other students/TAs/Professors?
 * Did you use any external resources? 
   * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch however!
