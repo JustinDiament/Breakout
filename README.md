@@ -1,23 +1,21 @@
-*TODO*: Please edit the following information in your final project
-
-## Title: Edit this line -- Put your 'title' of your project here
+## Title: Atari 2600 Breakout
 
 ## YouTube/Dropbox/Drive Link: Edit this line -- Put your link to your video(Preferably on YouTube) here (see deliverables).
 
 ## Edit this line: Put a few screenshots of your project here (see deliverables).
 
 
-* Name and partners name(At most teams of 2 folks total)
-  * Team member 1: *edit this*
-  * Team member 2: *edit this*
+* Name
+  * Team member 1: Justin Diament
 * How many hours did it take you to complete this final project? 
+  * It took me around 16 hours to complete this project
 * Did you collaborate or share ideas with any other students/TAs/Professors?
 * Did you use any external resources? 
   * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch however!
-  * *edit this*
-  * *edit this*
-  * *edit this*
+  * I used Joey DeVries' Breakout tutorial from learnopengl.com: https://learnopengl.com/In-Practice/2D-Game/Breakout 
+  Of course, I also added many personal touches, which are explained in my video. 
   * (Optional) What was the most interesting part of the Final Assignment? How could the instructor improve the final project?
+  The most interesting part of the Final Assignment was getting to choose my own topic for it. As I noted in my video, I'm a huge retro video game fan, so getting to make Breakout for my final project while using what I have learned in the course (and a little beyond the course content) was fun, despite the number of head-scratching bugs I dealt with. There is nothing I would do to improve the final project.
 
 ### Rubric
 
