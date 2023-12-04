@@ -18,17 +18,17 @@ LIBRARIES=""            # What libraries do we want to include
 if platform.system()=="Linux":
     ARGUMENTS="-D LINUX" # -D is a #define sent to preprocessor
     INCLUDE_DIR="-I ./include/ -I ./../common/thirdparty/glm/"
-    LIBRARIES="-lSDL2 -ldl"
+    LIBRARIES="-lSDL2 -ldl -L./include/freetype -lfreetype"
 elif platform.system()=="Darwin":
     ARGUMENTS="-D MAC" # -D is a #define sent to the preprocessor.
-    INCLUDE_DIR="-I ./include/ -I/Library/Frameworks/SDL2.framework/Headers -I./../common/thirdparty/old/glm"
-    LIBRARIES="-F/Library/Frameworks -framework SDL2"
+    INCLUDE_DIR="-I ./include/ -I./../common/thirdparty/old/glm"
+    LIBRARIES="-L lib -l SDL2-2.0.0 -L./include/freetype -lfreetype" 
 elif platform.system()=="Windows":
     COMPILER="g++ -std=c++17" # Note we use g++ here as it is more likely what you have
     ARGUMENTS="-D MINGW -std=c++17 -static-libgcc -static-libstdc++" 
     INCLUDE_DIR="-I./include/ -I./../common/thirdparty/old/glm/"
     EXECUTABLE="project.exe"
-    LIBRARIES="-lmingw32 -lSDL2main -lSDL2 -mwindows"
+    LIBRARIES="-lmingw32 -lSDL2main -lSDL2 -mwindows -L./include/freetype -lfreetype"
 # (2)=================== Platform specific configuration ===================== #
 
 # (3)====================== Building the Executable ========================== #
