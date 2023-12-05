@@ -1,8 +1,13 @@
-## Title: Atari 2600 Breakout
+## Title: Atari 2600 Super Breakout
 
 ## YouTube/Dropbox/Drive Link: Edit this line -- Put your link to your video(Preferably on YouTube) here (see deliverables).
 
-## Edit this line: Put a few screenshots of your project here (see deliverables).
+## Screenshots:
+![Level1](screenshots/level1.png)
+![Level2](screenshots/level2.png)
+![Level3](screenshots/level3.png)
+![Level4](screenshots/level4.png)
+![In Action](screenshots/inaction.png)
 
 
 * Name
@@ -10,6 +15,7 @@
 * How many hours did it take you to complete this final project? 
   * It took me around 18 hours to complete this project
 * Did you collaborate or share ideas with any other students/TAs/Professors?
+  * I spoke with Professor Shah about ideas in his office hours, but other than that I did not collaborate with any other people.
 * Did you use any external resources? 
   * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch however!
   * I used Joey DeVries' Breakout tutorial from learnopengl.com: https://learnopengl.com/In-Practice/2D-Game/Breakout 
