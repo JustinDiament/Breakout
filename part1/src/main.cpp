@@ -132,7 +132,7 @@ void InitializeProgram()
 	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 
 	// Create an application window using OpenGL that supports SDL
-	gGraphicsApplicationWindow = SDL_CreateWindow("Atari 2600 Breakout",
+	gGraphicsApplicationWindow = SDL_CreateWindow("Atari 2600 Super Breakout",
 												  SDL_WINDOWPOS_UNDEFINED,
 												  SDL_WINDOWPOS_UNDEFINED,
 												  gScreenWidth,

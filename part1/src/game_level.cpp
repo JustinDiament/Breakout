@@ -67,7 +67,7 @@ void GameLevel::init(std::vector<std::vector<unsigned int>> tileData, unsigned i
     unsigned int height = tileData.size();
     unsigned int width = tileData[0].size();
     float unit_width = levelWidth / static_cast<float>(width), unit_height = levelHeight / 11;
-    
+
     // initialize level tiles based on tileData
     for (unsigned int y = 0; y < height; ++y)
     {
@@ -75,52 +75,52 @@ void GameLevel::init(std::vector<std::vector<unsigned int>> tileData, unsigned i
         {
             // check block type from level data (2D level array)
             // solid block
-            if (tileData[y][x] == 1 || tileData[y][x] > 7) 
+            if (tileData[y][x] == 1 || tileData[y][x] > 7)
             {
-                glm::vec3 color = glm::vec3(1.0f); // original: white
+                int colorIndex = 1; // original: black
 
-                // if solid block is a type 1, it is a solid block from the middle of the screen, so color it
+                // if solid block is a type 1, it is a solid block from the middle of the screen, so color it white
                 if (tileData[y][x] == 1)
-                    color = glm::vec3(0.8f, 0.8f, 0.7f);
-                // if the solid block is a type 8, it is a screen border block, so color it grey
+                    colorIndex = 10;
+                // if the solid block is a type 8, it is a screen border block, so color it light grey
                 else if (tileData[y][x] == 8)
-                    color = glm::vec3(142 / 255.0f, 142 / 255.0f, 142 / 255.0f);
+                    colorIndex = 9;
 
                 // create the solid block and add it to the bricks vector
                 glm::vec2 pos(unit_width * x, unit_height * y);
                 glm::vec2 size(unit_width, unit_height);
-                GameObject obj(pos, size, ResourceManager::GetTexture("block_solid"), color);
+                GameObject obj(pos, size, ResourceManager::GetTexture("block_solid"), colorIndex);
                 obj.IsSolid = true;
                 this->Bricks.push_back(obj);
             }
             // non-solid block
-            else if (tileData[y][x] > 1) 
+            else if (tileData[y][x] > 1)
             {
-                glm::vec3 color = glm::vec3(1.0f); // original: white
+                int colorIndex = 1.0; // original: black
 
                 // blue block
                 if (tileData[y][x] == 2)
-                    color = glm::vec3(64 / 255.0f, 79 / 255.0f, 205.0 / 255.0f);
+                    colorIndex = 2;
                 // green block
                 else if (tileData[y][x] == 3)
-                    color = glm::vec3(65 / 255.0f, 146 / 255.0f, 69 / 255.0f);
+                    colorIndex = 3;
                 // yellow block
                 else if (tileData[y][x] == 4)
-                    color = glm::vec3(164 / 255.0f, 154 / 255.0f, 36 / 255.0f);
+                    colorIndex = 4;
                 // gold block
                 else if (tileData[y][x] == 5)
-                    color = glm::vec3(187 / 255.0f, 123 / 255.0f, 43 / 255.0f);
+                    colorIndex = 5;
                 // orange block
                 else if (tileData[y][x] == 6)
-                    color = glm::vec3(209 / 255.0f, 115 / 255.0f, 56 / 255.0f);
+                    colorIndex = 6;
                 // red block
                 else if (tileData[y][x] == 7)
-                    color = glm::vec3(211 / 255.0f, 85 / 255.0f, 70 / 255.0f);
+                    colorIndex = 7;
 
                 // create the non-solid block and add it to the bricks vector
                 glm::vec2 pos(unit_width * x, unit_height * y);
                 glm::vec2 size(unit_width, unit_height);
-                this->Bricks.push_back(GameObject(pos, size, ResourceManager::GetTexture("block"), color));
+                this->Bricks.push_back(GameObject(pos, size, ResourceManager::GetTexture("block"), colorIndex));
             }
         }
     }

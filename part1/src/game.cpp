@@ -98,11 +98,10 @@ void Game::Init()
 
     // load textures
     ResourceManager::LoadTexture("textures/background.png", false, "background");
-    ResourceManager::LoadTexture("textures/ball.png", true, "ball");
-    ResourceManager::LoadTexture("textures/block.png", false, "block");
-    ResourceManager::LoadTexture("textures/block_solid.png", false, "block_solid");
-    ResourceManager::LoadTexture("textures/paddle.png", true, "paddle");
-    ResourceManager::LoadTexture("textures/particle.png", true, "particle");
+    ResourceManager::LoadTexture("textures/texture_sampler.png", false, "ball");
+    ResourceManager::LoadTexture("textures/texture_sampler.png", false, "block");
+    ResourceManager::LoadTexture("textures/texture_sampler.png", false, "block_solid");
+    ResourceManager::LoadTexture("textures/texture_sampler.png", false, "paddle");
 
     // load levels
     GameLevel one;
@@ -123,11 +122,11 @@ void Game::Init()
 
     // set up player paddle 1
     glm::vec2 playerPos = glm::vec2(this->Width / 2.0f - PLAYER_SIZE.x / 2.0f, this->Height - PLAYER_SIZE.y);
-    Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("paddle"), glm::vec3(146 / 255.0f, 68 / 255.0f, 58 / 255.0f));
+    Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("paddle"), 8);
 
     // set up player paddle 2
     glm::vec2 playerPos2 = glm::vec2(this->Width / 2.0f - PLAYER_SIZE.x / 2.0f, this->Height - PLAYER_SIZE.y - 100.0f);
-    Player2 = new GameObject(playerPos2, PLAYER_SIZE, ResourceManager::GetTexture("paddle"), glm::vec3(146 / 255.0f, 68 / 255.0f, 58 / 255.0f));
+    Player2 = new GameObject(playerPos2, PLAYER_SIZE, ResourceManager::GetTexture("paddle"), 8);
 
     // initialize all key press values to false/unpressed
     for (int i = 0; i < 322; i++)
@@ -481,7 +480,7 @@ void Game::CheckBallPlayerCollision(BallObject *Ball, GameObject *Player)
         float centerBoard = Player->Position.x + Player->Size.x / 2.0f;
         float distance = (Ball->Position.x + Ball->Radius) - centerBoard;
         float percentage = distance / (Player->Size.x / 2.0f);
-        
+
         // then move the ball accordingly
         float strength = 2.0f;
         glm::vec2 oldVelocity = Ball->Velocity;
@@ -494,10 +493,10 @@ void Game::CheckBallPlayerCollision(BallObject *Ball, GameObject *Player)
 // look for collisions every frame and resolve them
 void Game::DoCollisions()
 {
-    // loop through every brick 
+    // loop through every brick
     for (GameObject &brick : this->Levels[this->Level].Bricks)
     {
-        // if the current brick has not been destroyed yet, check for collisions with it and both ball(s) 
+        // if the current brick has not been destroyed yet, check for collisions with it and both ball(s)
         // and handle them, if any
         if (!brick.Destroyed)
         {
