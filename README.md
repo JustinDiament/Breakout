@@ -7,7 +7,7 @@
 ![Level2](screenshots/level2.png)
 ![Level3](screenshots/level3.png)
 ![Level4](screenshots/level4.png)
-![In Action](screenshots/inaction.png)
+![In Action](screenshots/in_action.png)
 
 
 * Name
