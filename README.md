@@ -15,7 +15,7 @@
 * Name
   * Team member 1: Justin Diament
 * How many hours did it take you to complete this final project? 
-  * It took me around 21 hours to complete this project, including the video
+  * It took me around 19 hours to complete this project, including the video
 * Did you collaborate or share ideas with any other students/TAs/Professors?
   * I spoke with Professor Shah about ideas in his office hours, but other than that I did not collaborate with any other people.
 * Did you use any external resources? 
