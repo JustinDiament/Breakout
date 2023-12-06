@@ -190,8 +190,8 @@ void Game::Update(float dt)
     // if the player has won the game by clearing all breakable blocks, give them a win screen and reset the game
     if (this->State == GAME_ACTIVE && this->Levels[this->Level].IsCompleted())
     {
-        this->ResetLevel();
         this->ResetPlayer();
+        this->ResetLevel();
         this->State = GAME_WIN;
     }
 }
@@ -229,6 +229,9 @@ void Game::ProcessInput(float dt)
             // scroll one
             this->Level = (this->Level + 1) % 4;
 
+            // put two paddles on levels besides lv1
+            this->ResetPlayer();
+
             // done with w key press
             this->KeysProcessed[SDLK_w] = true;
         }
@@ -241,6 +244,9 @@ void Game::ProcessInput(float dt)
                 --this->Level;
             else
                 this->Level = 3;
+
+            // put two paddles on levels besides lv1
+            this->ResetPlayer();
 
             // done with s key press
             this->KeysProcessed[SDLK_s] = true;
@@ -313,7 +319,7 @@ void Game::ProcessInput(float dt)
 void Game::Render()
 {
     // if the game is active or at the menu, draw the game
-    if (this->State == GAME_ACTIVE || this->State == GAME_MENU)
+    if (this->State == GAME_ACTIVE || this->State == GAME_MENU || this->State == GAME_WIN)
     {
         // draw background
         Renderer->DrawSprite(ResourceManager::GetTexture("background"), glm::vec2(0.0f, 0.0f), glm::vec2(this->Width, this->Height), 0.0f);
